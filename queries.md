@@ -52,6 +52,10 @@ Orders
 WHERE Customers.CustomerID = Orders.CustomerID 
 GROUP BY Customers.CustomerID; 
 ```
+||
+```
+select count(o.customerid) as 'order count', c.customername, o.customerid from orders o join customers c on o.customerid = c.customerid group by o.customerid;
+```
 ## list customers names and the number of orders per customer. Sort the list by number of orders in descending order. _Ernst Handel_ should be at the top with 10 orders followed by _QUICK-Stop_, _Rattlesnake Canyon Grocery_ and _Wartian Herkku_ with 7 orders each.
 ```
 SELECT 
